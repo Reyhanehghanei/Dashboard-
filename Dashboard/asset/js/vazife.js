@@ -10,6 +10,13 @@ let btnTime = document.querySelector('.btn-time')
 let timerAdd = document.querySelector('.time')
 let Add = document.querySelector('#add-timer')
 let sub = document.querySelector('#s-btn')
+let btnKarbar = document.querySelector('.btn-karbar')
+let btnSabt = document.querySelector('.btn-sabt')
+let todoTime = document.querySelector('.todo-time')
+let timer = document.querySelector('.timer')
+let selectBox = document.querySelector('.select-box')
+
+
 
 function show() {
     if (document.getElementById('show').style.display == 'block') {
@@ -50,11 +57,43 @@ btnTime.addEventListener('click', function (e) {
 // todoList
 
 sub.addEventListener('click', function (e) {
-     alert('salam')
+    alert('salam')
+})
+
+btnKarbar.addEventListener('click', function (e) {
+    reminder.style.display = 'none'
+    addreminder.style.display = 'none'
+
+})
+
+btnSabt.addEventListener('click', function (e) {
+    todoTime.style.display = 'block'
+    timerAdd.style.display = 'none'
+    Add.style.display = 'none'
+
+
+})
+
+selectBox.addEventListener('change', function (e) {
+    reminder.style.display = 'none'
+    addreminder.style.display = 'none'
+
+
 })
 
 
-// end-todolist 
+// Date
+$('#datepicker').datepicker({
+    uiLibrary: 'bootstrap5'
+});
+// end Date
 
 
+// select
+function ChangeText() {
+    var myselect = document.getElementById("MySelect");
+    var result = document.getElementById("Result");
+    result.innerHTML = "شما " + myselect.value + " را انتخاب کرده اید ";
+}
 
+// end select

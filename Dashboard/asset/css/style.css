@@ -262,11 +262,18 @@ nav {
     text-align: right;
 }
 
-.reminder span {
+/* .reminder span {
     font-size: 13px;
     border-radius: 50%;
     padding: 1px 5px 3px 2px;
     background-color: aqua;
+} */
+
+
+.btn-karbar {
+    margin-top: 15px;
+    border: 0;
+    background: unset;
 }
 
 .reminder-d {
@@ -292,6 +299,30 @@ nav {
     left: 30rem;
     top: -6rem;
     display: none;
+}
+
+.todo-time {
+    position: relative;
+    top: -7.6rem;
+    left: 28rem;
+    display: none;
+}
+
+.todo-time input {
+    background-color: unset;
+    border: 0;
+    border-bottom: 1px solid gray;
+}
+
+.todo-time input:focus {
+    outline: none;
+}
+
+#Result {
+    font-size: 13px;
+    position: absolute;
+    right: 23rem;
+    color: red;
 }
 
 /* end-page */
