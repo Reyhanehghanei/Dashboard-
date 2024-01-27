@@ -11,13 +11,6 @@ let timerAdd = document.querySelector('.time')
 let Add = document.querySelector('#add-timer')
 let sub = document.querySelector('#s-btn')
 let btnKarbar = document.querySelector('.btn-karbar')
-let btnSabt = document.querySelector('.btn-sabt')
-let todoTime = document.querySelector('.todo-time')
-let timer = document.querySelector('.timer')
-let selectBox = document.querySelector('.select-box')
-
-
-
 function show() {
     if (document.getElementById('show').style.display == 'block') {
         document.getElementById('show').style.display = 'none'
@@ -66,34 +59,23 @@ btnKarbar.addEventListener('click', function (e) {
 
 })
 
-btnSabt.addEventListener('click', function (e) {
-    todoTime.style.display = 'block'
-    timerAdd.style.display = 'none'
-    Add.style.display = 'none'
-
-
-})
-
-selectBox.addEventListener('change', function (e) {
-    reminder.style.display = 'none'
-    addreminder.style.display = 'none'
-
-
-})
-
-
-// Date
-$('#datepicker').datepicker({
-    uiLibrary: 'bootstrap5'
-});
-// end Date
-
-
-// select
+// end-todolist 
 function ChangeText() {
     var myselect = document.getElementById("MySelect");
     var result = document.getElementById("Result");
     result.innerHTML = "شما " + myselect.value + " را انتخاب کرده اید ";
+    reminder.style.display = 'none'
+    addreminder.style.display = 'none'
 }
 
-// end select
+
+$('#datepicker').datepicker({
+    uiLibrary: 'bootstrap5'
+});
+
+$(function () {
+    $("#datepicker").datepicker({
+        autoclose: true,
+        todayHighlight: true,
+    }).datepicker('update', new Date());
+}); 
